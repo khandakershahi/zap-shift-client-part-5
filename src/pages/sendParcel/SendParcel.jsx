@@ -71,19 +71,17 @@ const SendParcel = () => {
         //save the parcel info to the database
         axiosSecure.post("/parcels", data).then((res) => {
           console.log("after saving parcel", res.data);
-          if(res.data.insertedId){
-            navigate('/dashboard/my-parcels');
+          if (res.data.insertedId) {
+            navigate("/dashboard/my-parcels");
             Swal.fire({
               position: "top-end",
               icon: "success",
               title: "Parcel has added, please Pay",
               showConfirmButton: false,
-              timer: 2500
+              timer: 2500,
             });
           }
         });
-
-    
       }
     });
   };

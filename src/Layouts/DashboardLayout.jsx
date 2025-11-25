@@ -1,4 +1,5 @@
 import React from "react";
+import { FaHistory, FaMotorcycle } from "react-icons/fa";
 import { FiShoppingBag } from "react-icons/fi";
 import { IoBagHandleOutline } from "react-icons/io5";
 import { NavLink } from "react-router";
@@ -82,6 +83,26 @@ const DashboardLayout = () => {
               >
                 <FiShoppingBag className="my-1.5 inline-block size-4" />
                 <span className="is-drawer-close:hidden">My Parcels</span>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/dashboard/payment-history"
+                className="is-drawer-close:tooltip is-drawer-close:tooltip-right"
+                data-tip="Payment History"
+              >
+                <FaHistory className="my-1.5 inline-block size-4" />
+                <span className="is-drawer-close:hidden">Payment History</span>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/dashboard/approve-riders"
+                className="is-drawer-close:tooltip is-drawer-close:tooltip-right"
+                data-tip="Approve Riders"
+              >
+                <FaMotorcycle className="my-1.5 inline-block size-4" />
+                <span className="is-drawer-close:hidden">Approve Riders</span>
               </NavLink>
             </li>
 
